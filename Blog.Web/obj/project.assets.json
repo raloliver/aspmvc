@@ -3461,19 +3461,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Israel Oliveira\\.nuget\\packages\\": {}
+    "C:\\Users\\raloliver\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\cprojects\\aspmvc\\Blog.Web\\Blog.Web.csproj",
+      "projectUniqueName": "C:\\projects\\aspmvc\\Blog.Web\\Blog.Web.csproj",
       "projectName": "Blog.Web",
-      "projectPath": "C:\\cprojects\\aspmvc\\Blog.Web\\Blog.Web.csproj",
-      "packagesPath": "C:\\Users\\Israel Oliveira\\.nuget\\packages\\",
-      "outputPath": "C:\\cprojects\\aspmvc\\Blog.Web\\obj\\",
+      "projectPath": "C:\\projects\\aspmvc\\Blog.Web\\Blog.Web.csproj",
+      "packagesPath": "C:\\Users\\raloliver\\.nuget\\packages\\",
+      "outputPath": "C:\\projects\\aspmvc\\Blog.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Israel Oliveira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\raloliver\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
