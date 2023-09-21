@@ -1,29 +1,47 @@
-﻿<!DOCTYPE html>
+﻿@{
+    bool dropdownOpen = false;
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Blog.Web</title>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 </head>
 <body>
-    <header>
-        <nav class="container flex mx-auto my-4">
+    <header class="dark:bg-slate-800 text-white mx-auto mb-4 py-2">
+        <nav class="container flex">
             <div class="flex">
                 <a class="block py-2 px-4" asp-area="" asp-controller="Home" asp-action="Index">Blog.Web</a>
                 <ul class="flex">
                     <li>
-                        <a class="block py-2 px-4" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        <a class="flex px-4 py-2 font-medium text-white rounded-md  hover:bg-blue-800" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
                     <li>
-                        <a class="block py-2 px-4" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <a class="flex px-4 py-2 font-medium text-white rounded-md  hover:bg-blue-800" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </li>                    
+                    <li class="relative">
+                        <button class="flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-blue-800"
+                                onclick="@(dropdownOpen = !dropdownOpen)">
+                            Admin (@(dropdownOpen))
+                        </button>                        
+                        <div class="right-0 p-2 mt-1 bg-white rounded-md shadow lg:absolute @(dropdownOpen ? "flex flex-col" : "hidden")">
+                            <ul class="space-y-2 lg:w-48">
+                                <li>
+                                    <a href="#" onclick="@(dropdownOpen = !dropdownOpen)" class="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black">Add Tag</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <div class="container mx-auto">
-        <main role="main" class="pb-3">
+    <div>
+        <main role="main">
             @RenderBody()
         </main>
     </div>
